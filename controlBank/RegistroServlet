@@ -1,0 +1,57 @@
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Random;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class RegistroServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+    Random rnd = new Random();
+    /**
+     * Envia los datos ingresados por el usuario a la base de datos.
+     * Usando la clase DatabaseConnection
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String name = request.getParameter("name");
+        String id = request.getParameter("id");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        try {
+            // Crear una instancia de la clase DatabaseConnection
+            DatabaseConnection db = new DatabaseConnection();
+
+            // Conectar a la base de datos MariaDB
+            Connection conn = db.getConnection();
+            
+            //Genera el consecutivo
+            int consecutive = rnd.nextInt();
+
+            // Crear una sentencia preparada para insertar los datos
+            PreparedStatement pstmt = conn.prepareStatement("INSERT INTO clients (consecutive, id, name, username, password) VALUES (?,?,?,?,?)");
+
+            pstmt.setInt(1, consecutive);
+            pstmt.setString(2, id);
+            pstmt.setString(3, name);
+            pstmt.setString(4, username);
+            pstmt.setString(5, password);
+
+            // Ejecutar la sentencia preparada
+            pstmt.executeUpdate();
+
+            // Cerrar la conexión
+            conn.close();
+
+            // Redirigir a inciar sesión
+            response.sendRedirect("logIn.html");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}

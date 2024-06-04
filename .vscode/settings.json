@@ -1,0 +1,24 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "BankDataBase",
+            "username": "root",
+            "database": "mysql"
+        }
+    ],
+    "java.project.sourcePaths": [
+        ".",
+        "controlBank"
+    ],
+    "java.project.referencedLibraries": [
+        "assets\\driver\\mariadb-java-client-3.4.0.jar"
+    ]
+}

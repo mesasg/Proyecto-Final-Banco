@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF9E6; 
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: white; 
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="password"],
+        input[type="name"], input[type="id"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #1d1652;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!--Para que redireccione al Log In-->
+    <form action="logIn.html" method="post">
+        <h1 style="text-align:center;">Registrate</h1>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="id">ID:</label>
+        <input type="numeric" id="id" name="id" required>
+
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

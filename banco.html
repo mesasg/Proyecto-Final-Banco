@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Banco</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/icono32.jpg">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
+
+	<style>
+		.center-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		.center-form button {
+			margin-bottom: 10px;
+			padding: 10px 20px;
+		}
+
+		.center-form input[type="text"],
+		.center-form input[type="number"] {
+			margin-bottom: 10px;
+			padding: 10px;
+			width: 300px;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="assets/img/logoSS70.jpg" alt="">
+		
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li><a href="index.html">Inicio</a></li>
+								<li><a href="inmobiliaria.html">Inmobiliaria</a></li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<h1>Todas tus transacciones en un solo lugar</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- contact form -->
+<!-- contact form -->
+<div class="contact-from-section mt-150 mb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="form-title">
+                    <h2>Selecciona la transacción que deseas realizar</h2>
+                    <p>-</p>
+                </div>
+                <div id="form_status"></div>
+                <div class="contact-form">
+                    <form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+                        <p>
+                            <button id="retireButton">Retirar</button>
+                            <button id="depositButton">Depositar</button>
+                            <button id="transferButton">Transferir</button>
+                        </p>
+                        <p>
+                            <input type="double" placeholder="Cantidad" name="amount" id="amount" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                            <input type="int" placeholder="Número de la cuenta" name="destinyAccount" id="destinyAccount" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                        </p>
+                        <input type="hidden" name="token" value="FsWga4&@f6aw" />
+                        <input type="submit" value="Realizar Transacción">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end contact form -->
+
+<script>
+    document.getElementById("depositButton").addEventListener("click", function() {
+        document.getElementById("destinyAccount").style.display = "none";
+		document.getElementById("destinyAccount").style.display = "block";
+    });
+</script>
+<script>
+    document.getElementById("retireButton").addEventListener("click", function() {
+        document.getElementById("destinyAccount").style.display = "none";
+		document.getElementById("destinyAccount").style.display = "block";
+    });
+</script>
+<!-- end contact form -->
+	
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copirigth &copy;Sassari <a href=""></a> <br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+	
+	
+	<!-- jquery -->
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="assets/js/sticker.js"></script>
+	<!-- form validation js -->
+	<script src="assets/js/form-validate.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
+	
+</body>
+</html>
