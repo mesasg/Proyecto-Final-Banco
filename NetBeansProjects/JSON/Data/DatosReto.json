@@ -1,0 +1,7 @@
+[
+  { "type": "home", "number": "212 555-1234" },
+  { "type": "fax", "number": "646 555-4567" },
+  { "type": "Cell", "number": "894 563 " },
+  { "type": "Telefono", "number": "5554567" },
+  { "type": "OTRO", "number": "000000000" }
+]
