@@ -4,33 +4,49 @@ public class Account {
     String client;
     double balance;
     
-    /** Constructor cuenta */
+    /** Constructor cuenta
+     * @param accountNumber nNmero de cuenta
+     * @param client Cliente al cual pertenece
+     * @param balance Dinero que tiene en la cuenta
+     */
     public Account(int accountNumber, String client, double balance) {
         this.accountNumber = accountNumber;
         this.client = client;
         this.balance = balance;
     }
-    /** getter numero de cueta*/
+    /** Getter numero de cuenta
+     * @return El numero de la cuenta
+    */
     public int getAccountNumber() {
         return accountNumber;
     }
-    /** setter numero de cuenta */
+    /** Setter numero de cuenta
+     * @param accountNumber Numero de la cuenta
+     */
     public void setAccountNumber(int accountNumber) {
         this.accountNumber = accountNumber;
     }
-    /** getter cliente */
+    /** Getter cliente
+     * @return Cliente dueño de la cuenta
+     */
     public String getClient() {
         return client;
     }
-    /** setter cliente */
+    /** Setter cliente 
+     * @param client Cliente dueño de la cuenta
+    */
     public void setClient(String client) {
         this.client = client;
     }
-    /** getter balance */
+    /** Getter balance 
+     * @return Cantidad de dinero que hay en la cuenta
+    */
     public double getBalance() {
         return balance;
     }
-    /** Setter balance */
+    /** Setter balance
+     * @param balance Cantidad de dinero que hay en la cuenta
+     */
     public void setBalance(double balance) {
         this.balance = balance;
     }

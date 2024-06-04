@@ -7,7 +7,7 @@ public class COPConversion {
      * @param amount -La cantidad de dinero.
      * @return La equivalencia de la cantidad de dinero en COP.
      */
-    public static double checkCurrencyType(String currencyType, double amount){
+    public  double checkCurrencyType(String currencyType, double amount){
 
         if (!(currencyType.equals("C"))){
             double cop ;
@@ -27,7 +27,7 @@ public class COPConversion {
      * @param amount -La cantidad de dinero.
      * @return La equivalencia de la cantidad de dinero en COP.
      */
-    public static double convertEuro(double amount){
+    public  double convertEuro(double amount){
         double amountCOP = amount * 0.00024;
         return amountCOP;
     }
@@ -36,7 +36,7 @@ public class COPConversion {
      * @param amount -La cantidad de dinero.
      * @return La equivalencia de la cantidad de dinero en COP.
      */
-    public static double convertDolar(double amount){
+    public  double convertDolar(double amount){
         double amountCOP = amount * 0.00026;
         return amountCOP;
     }
